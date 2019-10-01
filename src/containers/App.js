@@ -34,7 +34,9 @@ class App extends Component {
 			 converted to lowercase letters (using the toLowerCase method), includes the text we typed (also in small letters),
 			  which is read from this.state.robots */
 		})
-		return (
+		return !robots.length ?
+			<h1>Loading...</h1> :
+		(
 			<div className='tc'>
 				<h1 className='f2'>RoboFriends</h1>
 				<SearchBox searchChange={this.onSearchChange}/> 
